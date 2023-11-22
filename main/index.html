@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../resources/images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../resources/styles/header.css">
+    <script src="script.js" defer></script>
+    <title>Sweet Deal</title>
+</head>
+<body>
+    <header class="header">
+        <div class="img-cont" id="logo-cont">
+            <a href="">
+                <img src="../resources/images/transparent_logo.png" id="img-logo" alt="logo">
+            </a>
+            </div>
+        <nav>
+            <input id="burger" type="checkbox">
+            <label for="burger" class="menu-button">
+            <span></span>
+            </label>
+            <ul>
+                <li class="nav-li"><a href="">Главная</a></li>
+                <li class="nav-li"><a href="">Каталог</a></li>
+                <li class="nav-li"><a href="">О нас</a></li>
+                <li class="nav-li"><a href="">Вход / Регистрация</a></li>
+                <li>
+                    <a href=""><div class="img-cont" id="basket-cont">
+                        <img src="../resources/images/basket.png" id="img-basket" alt="logo">
+                </div></a>  
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="head-splitter"></div>
+    <main>
+        <section id="init-display">
+            <div id="section1-cont">
+                <div id="main-text-cont">
+                    <h1>Добро пожаловать<br/> в магазин Sweet Deal</h1>
+                    <p>В нашем магазине вы можете найти много вкусняшек<br/> для себя и своих близких.
+                     <br><br>Качество и большой ассортимент - то, что мы гарантируем!</p>
+                </div>
+                <div id="main-img-cont">
+                    <img src="../resources/images/piece_of_cake.png" alt="">
+                </div>
+            </div>
+            <div id="arrow-img-cont">
+                <a href="#catalog-reference">
+                    <img src="../resources/images/down_arrow.png" alt="">
+                </a>
+            </div>
+        </section>
+        <section id="catalog-reference">
+            <div id="section2-cont">
+                 <div id="cat-text-cont">
+                    <h2>Наша продукция</h2>
+                    <p>В нашем магазине доступен широкий выбор следующей продукции</p>
+                 </div>
+                 <div id="cat-assort-cont">
+                    <div class="cat-item" id="cat-item-drinks">
+                        <div class="cat-item-img-cont">
+                            <img src="../resources/images/cola.png" alt="">
+                        </div>
+                        <h4>Напитки</h4>
+                    </div>
+                    <div class="cat-item" id="cat-item-sweets">
+                        <div class="cat-item-img-cont">
+                            <img src="../resources/images/candies.png" alt="">
+                        </div>
+                        <h4>Сладости</h4>
+                    </div>
+                    <div class="cat-item" id="cat-item-snacks">
+                        <div class="cat-item-img-cont">
+                            <img src="../resources/images/chips.png" alt="">
+                        </div>
+                        <h4>Снеки</h4>
+                    </div>
+                 </div>
+                 <button id="cat-button">ПЕРЕЙТИ К КАТАЛОГУ</button>
+            </div>
+        </section>
+        <section id="feedback">
+            <div id="feed-text-cont">
+                <h2>Отзывы о нашей работе</h2>
+            </div>
+            <div id="slider-cont">
+                <img id="feed-candies" src="../resources/images/feedback_candies.png" alt="">
+                <img id="left-arrow" src="../resources/images/scroll_arrow.png" alt="">
+                <div id="slider">
+                    <div class="slide" id="slide1">
+                        <h3>Покупатель 1</h3>
+                        <img src="../resources/images/stars.png" alt="">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, possimus, velit suscipit voluptatem similique officiis molestiae fugiat recusandae, distinctio in voluptates sint vitae quod? Pariatur illo ea architecto numquam doloremque!</p>
+                    </div>
+                    <div class="slide">
+                        <h3>Покупатель 2</h3>
+                        <img src="../resources/images/stars.png" alt="">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, possimus, velit suscipit voluptatem similique officiis molestiae fugiat recusandae, distinctio in voluptates sint vitae quod? Pariatur illo ea architecto numquam doloremque!</p>
+                    </div>
+                    <div class="slide">
+                        <h3>Покупатель 3</h3>
+                        <img src="../resources/images/stars.png" alt="">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, possimus, velit suscipit voluptatem similique officiis molestiae fugiat recusandae, distinctio in voluptates sint vitae quod? Pariatur illo ea architecto numquam doloremque!</p>
+                    </div>
+                </div>
+                <img id="right-arrow" src="../resources/images/scroll_arrow.png" alt="">
+            </div>
+        </section>
+    </main>
+</body>
+</html>
