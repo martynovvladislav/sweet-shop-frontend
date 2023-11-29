@@ -12,7 +12,7 @@ function scrollRight() {
     });
   } else {
     slider.scrollBy({
-      left: (slide.clientWidth) + 101,
+      left: (slide.clientWidth) + 100,
       behavior: "smooth"
     });
   }
@@ -27,7 +27,7 @@ function scrollLeft() {
         });
     } else {
         slider.scrollBy({
-            left: -(slide.clientWidth) - 101,
+            left: -(slide.clientWidth) - 100,
             behavior: "smooth"
         });
     }
