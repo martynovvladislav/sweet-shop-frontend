@@ -1,0 +1,82 @@
+{
+  "object1": {
+    "id": 0,
+    "type": "sweets",
+    "name": "Конфетка",
+    "price": 150,
+    "new": true,
+    "imgsrc": "../resources/images/item_imgs/candy.png"
+  },
+  
+  "object2": {
+    "id": 1,
+    "type": "sweets",
+    "name": "Сладкая вата",
+    "price": 100,
+    "new": false,
+    "imgsrc": "../resources/images/item_imgs/candy_floss.png"
+  },
+  
+  "object3": {
+    "id": 2,
+    "type": "sweets",
+    "name": "Мороженка",
+    "price": 50,
+    "new": false,
+    "imgsrc": "../resources/images/item_imgs/ice_cream.png"
+  },
+
+  "object4": {
+    "id": 3,
+    "type": "drinks",
+    "name": "Веселая кола",
+    "price": 100,
+    "new": false,
+    "imgsrc": "../resources/images/item_imgs/happy_cola.png"
+  },
+
+  "object5": {
+    "id": 4,
+    "type": "drinks",
+    "name": "Лимонад",
+    "price": 150,
+    "new": true,
+    "imgsrc": "../resources/images/item_imgs/lemonade.png"
+  },
+
+  "object6": {
+    "id": 5,
+    "type": "drinks",
+    "name": "Холодный чай",
+    "price": 120,
+    "new": false,
+    "imgsrc": "../resources/images/item_imgs/ice_tea.png"
+  },
+
+  "object7": {
+    "id": 6,
+    "type": "snacks",
+    "name": "Картофельные чипсы",
+    "price": 110,
+    "new": true,
+    "imgsrc": "../resources/images/item_imgs/potato_chips.png"
+  },
+
+  "object8": {
+    "id": 7,
+    "type": "snacks",
+    "name": "Попкорн",
+    "price": 130,
+    "new": true,
+    "imgsrc": "../resources/images/item_imgs/popcorn.png"
+  },
+
+  "object9": {
+    "id": 8,
+    "type": "snacks",
+    "name": "Банановые чипсы",
+    "price": 100,
+    "new": true,
+    "imgsrc": "../resources/images/item_imgs/banana_chips.png"
+  }
+}
