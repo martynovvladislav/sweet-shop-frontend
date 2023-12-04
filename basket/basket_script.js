@@ -116,6 +116,9 @@ function itemConstructor(item, amount) {
 
 function renderBasket() {
     let basket = JSON.parse(localStorage.getItem("basket"));
+    if (basket == null) {
+        basket = new Object();
+    }
     totalAmount = 0;
     totalSum = 0;
     if (Object.keys(basket).length == 0) {

@@ -10,7 +10,7 @@ function changeBasket(item) {
     item = String(item);
     let basket = JSON.parse(localStorage.getItem("basket"));
     if (basket == null) {
-        basket = Object();
+        basket = new Object();
     }
     if (item in basket) {
         basket[item] = basket[item] + 1;
