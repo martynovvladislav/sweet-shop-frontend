@@ -3,8 +3,19 @@ const drinksButton = document.getElementById("category-drinks-btn");
 const snacksButton = document.getElementById("category-snacks-btn");
 const itemsContainer = document.getElementById("items-cont");
 const notificationsContainer = document.getElementById("not-cont");
-import itemsDB from '../resources/database/db.json' assert { type: 'json'};
 let categoryState = "sweets";
+let itemsDB;
+
+let request = new XMLHttpRequest();
+request.open('GET', '../resources/database/db.json', false);
+request.send(null);
+
+if (request.status === 200) {
+    itemsDB = JSON.parse(request.responseText);
+    console.log('itemsDB successfully loaded:', itemsDB);
+} else {
+    console.error('Failed to load itemsDB');
+}
 
 function changeBasket(item) {
     item = String(item);

@@ -7,7 +7,17 @@ let totalAmount = 0;
 const totalSumCont = document.getElementById("total-sum-cont");
 const totalAmountCont = document.getElementById("total-amount-cont");
 
-import itemsDB from '../resources/database/db.json' assert { type: 'json'};
+let itemsDB;
+let request = new XMLHttpRequest();
+request.open('GET', '../resources/database/db.json', false);
+request.send(null);
+
+if (request.status === 200) {
+    itemsDB = JSON.parse(request.responseText);
+    console.log('itemsDB successfully loaded:', itemsDB);
+} else {
+    console.error('Failed to load itemsDB');
+}
 
 function clearBasket() {
     basketContainer.innerHTML = `<div id="empty-basket-info">
