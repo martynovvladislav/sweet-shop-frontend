@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="../resources/styles/header.css">
     <link rel="stylesheet" href="../resources/styles/footer.css">
     <link rel="stylesheet" href="../resources/styles/scrollbar.css">
-    <link rel="stylesheet" href="catalog-style.css">
-    <script type="module" src="catalog_script.js" defer></script>
+    <link rel="stylesheet" href="basket-style.css">
+    <script type="module" src="basket_script.js" defer></script>
     <title>Sweet Deal</title>
 </head>
 <body>
@@ -29,7 +29,7 @@
                 <li class="nav-li"><a href="">О нас</a></li>
                 <li class="nav-li"><a href="">Вход / Регистрация</a></li>
                 <li>
-                    <a href="../basket/"><div class="img-cont" id="basket-cont">
+                    <a href=""><div class="img-cont" id="basket-cont">
                         <img src="../resources/images/basket.png" id="img-basket" alt="logo">
                 </div></a>  
                 </li>
@@ -38,36 +38,39 @@
     </header>
     <div class="head-splitter"></div>
     <main>
-        <aside id="not-cont">
-            <!-- <div class="notification">
-                <p><strong>Сладкая вата</strong> добавлен(-а) в корзину</p>
-            </div> -->
-        </aside>
         <section id="init-display">
             <div id="section1-cont">
                 <div id="main-text-cont">
-                    <h1>Наша продукция</h1>
-                    <p>Ознакомьтесь с ассортиментом нашей продукции и сделайте заказ!</p>
+                    <h1>Корзина</h1>
                 </div>
-                <div id="cat-img-princess-cont">
-                    <img id="princess-img" src="../resources/images/princess.png" alt="">
-                </div>
-                <div id="cat-img-candies-cont">
-                    <img id="candies-img" src="../resources/images/catalog_candies.png" alt="">
+                <div id="basket-img-basket-cont">
+                    <img id="basket-img" src="../resources/images/basket_drawing.png" alt="">
                 </div>
             </div>
         </section>
-        <section id="catalog">
-            <div id="categories">
-                <button id="category-sweets-btn">Сладости</button>
-                <button id="category-drinks-btn">Напитки</button>
-                <button id="category-snacks-btn">Снеки</button>
+        <section id="basket">
+            <div id="basket-total">
+                <div id="basket-info">
+                    <h4 id="total-sum-cont"></h4>
+                    <h4 id="total-amount-cont"></h4>
+                </div>
+                <button id="clear-basket-btn">Очистить все</button>
             </div>
             <div id="items-cont">
-            </div>
-        </section>
-        <section id="map">
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A68e84e37303ebe073bd291a916f75c439219283f982c5bde5e1991f28c875607&amp;source=constructor" width="100%" height="300px" frameborder="0"></iframe>
+                <!-- <div class="item">
+                    <div class="item-info">
+                        <img src="../resources/images/item_imgs/candy.png" alt="">
+                        <p>Конфетка</p>
+                        <h2>150₽</h2>
+                    </div>
+                    <div class="item-control">
+                        <button class="plus-btn">+</button>
+                        <p class="item-amount">0</p>
+                        <button class="minus-btn">-</button>
+                        <button class="del-btn">Удалить</button>
+                        <p class="item-fullprice">100₽</p>
+                    </div>
+                </div> -->
         </section>
     </main>
     <footer>
