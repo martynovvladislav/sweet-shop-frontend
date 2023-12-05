@@ -59,6 +59,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 }
 
 #main-text-cont h1 {
@@ -85,9 +86,9 @@ main {
 
 #cat-img-candies-cont {
     position: absolute;
-    bottom: -4vw;
-    right: -3vw;
-    width: 20vw;
+    bottom: 0;
+    right: 0;
+    width: 15vw;
 }
 
 #candies-img {
@@ -237,13 +238,25 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    pointer-events: none;
+    pointer-events: all;
     opacity: 1;
+    position: relative;
 }
 
 .notification p {
     font-size: 0.8rem;
     text-align: center;
+}
+
+.notification img {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    max-width: 15px;
+}
+
+.notification img:hover {
+    cursor: pointer;
 }
 
 /* media queries */
@@ -277,9 +290,7 @@ main {
     }
 
     #cat-img-candies-cont {
-        width: 30vw;
-        bottom: -6vw;
-        right: -5vw;
+        width: 21vw;
     }
 
     #categories {
@@ -328,9 +339,7 @@ main {
     }
 
     #cat-img-candies-cont {
-        width: 40vw;
-        bottom: -8vw;
-        right: -6vw;
+        width: 30vw;
     }
 
     #categories {

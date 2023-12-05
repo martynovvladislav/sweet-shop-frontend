@@ -4,6 +4,9 @@ const rightArrow = document.getElementById("right-arrow");
 const slider = document.getElementById("slider");
 const slide = document.getElementById("slide1");
 
+const mainText = document.getElementById("main-text-cont");
+const cakeImg = document.getElementById("main-img-cont");
+
 function scrollRight() {
   if (slider.scrollWidth - slider.clientWidth < Math.round(slider.scrollLeft) + 10 && slider.scrollWidth - slider.clientWidth > Math.round(slider.scrollLeft) - 10) {
     slider.scrollTo({
@@ -57,4 +60,10 @@ window.addEventListener("resize", function() {
         left: 0,
         behavior: "auto"
     })
+});
+
+window.addEventListener("scroll", function() {
+  let value = window.scrollY;
+  mainText.style.left = -value * 0.3 + "px";
+  cakeImg.style.right = -value * 0.3 + "px";
 });

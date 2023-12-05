@@ -3,6 +3,9 @@ const drinksButton = document.getElementById("category-drinks-btn");
 const snacksButton = document.getElementById("category-snacks-btn");
 const itemsContainer = document.getElementById("items-cont");
 const notificationsContainer = document.getElementById("not-cont");
+const princessImage = document.getElementById("cat-img-princess-cont");
+const candiesImage = document.getElementById("cat-img-candies-cont");
+const mainText = document.getElementById("main-text-cont");
 let categoryState = "sweets";
 let itemsDB;
 
@@ -34,9 +37,9 @@ function changeBasket(item) {
 function showNotification(name) {
     let notification = document.createElement("div");
     notification.className = "notification";
-    notification.innerHTML = `<p><strong>${name}</strong> добавлен(-а) в корзину</p>`;
+    notification.innerHTML = `<img src="../resources/images/cross_icon.png"><p><strong>${name}</strong> добавлен(-а) в корзину</p>`;
     notificationsContainer.append(notification);
-    setTimeout(() => removeNotification(notification), 1000);
+    setTimeout(() => removeNotification(notification), 5000);
 }
 
 function removeNotification(notification) {
@@ -136,4 +139,16 @@ snacksButton.addEventListener("click", () => {
     renderCatalog();
 });
 
+notificationsContainer.addEventListener("click", function(event) {
+    if (event.target.tagName == "IMG") {
+        removeNotification(event.target.parentNode);
+    }
+});
 
+
+window.addEventListener("scroll", function() {
+    let value = window.scrollY;
+    princessImage.style.left = -value * 0.3 + "px";
+    candiesImage.style.right = -value * 0.3 + "px";
+    mainText.style.top = value * 0.5 + "px";
+});
