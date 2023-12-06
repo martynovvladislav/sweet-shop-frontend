@@ -44,22 +44,37 @@ function resetTimer() {
   timerId = setInterval(scrollRight, 7000);
 }
 
+function leftButtonHandler() {
+  leftArrow.removeEventListener("click", leftButtonHandler);
+  rightArrow.removeEventListener("click", rightButtonHandler);
+  scrollLeft();
+  resetTimer();
+  setTimeout(() => {
+    leftArrow.addEventListener("click", leftButtonHandler);
+    rightArrow.addEventListener("click", rightButtonHandler);
+  }, 600);
+}
 
-leftArrow.addEventListener("click", function () {
-    scrollLeft();
-    resetTimer();
-});
+leftArrow.addEventListener("click", leftButtonHandler);
 
-rightArrow.addEventListener("click", function (ev) {
-    scrollRight();
-    resetTimer();
-});
+function rightButtonHandler() {
+  leftArrow.removeEventListener("click", leftButtonHandler);
+  rightArrow.removeEventListener("click", rightButtonHandler);
+  scrollRight();
+  resetTimer();
+  setTimeout(() => {
+    leftArrow.addEventListener("click", leftButtonHandler);
+    rightArrow.addEventListener("click", rightButtonHandler);
+  }, 600);
+}
+
+rightArrow.addEventListener("click", rightButtonHandler);
 
 window.addEventListener("resize", function() {
-    slider.scrollTo({
-        left: 0,
-        behavior: "auto"
-    })
+  slider.scrollTo({
+      left: 0,
+      behavior: "auto"
+  })
 });
 
 window.addEventListener("scroll", function() {
