@@ -1,0 +1,149 @@
+:root {
+    --pink: #ff3ec9;
+    --white: #ffffff;
+    --milk: #fcfcfc;
+    --black: #000000;
+    --index: calc(1vw + 1vh);
+    --transformtime: 100ms;
+}
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url("../resources/images/background_pattern.png");
+    background-size: cover;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+main {
+    background: rgba(255, 62, 201, 0.9);
+    min-height: 100vh;
+    width: 100%;
+    backdrop-filter: grayscale(100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 1);
+    padding: 30px;
+    border-radius: 20px;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    margin: 0;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+    outline: none;
+    background: none;
+    border-radius: 20px;
+    border-color: var(--pink);
+    border-style: solid;
+    transition: 300ms;
+    padding: 10px;
+}
+
+.input-cont {
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+input:focus ~ label, input:not(:placeholder-shown) ~ label{
+    top: -20px;
+}
+
+label {
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: 300ms;
+}
+
+#submitreg {
+    width: 200px;
+}
+
+#submitreg, button {
+    border-width: 0;
+    border-radius: 30px;
+    padding: 10px 15px;
+    background-color: var(--pink);
+    color: white;
+    font-size: large;
+    font-weight: 1000;
+    cursor: pointer;
+    transition: background-color var(--transformtime);
+}
+
+#submitreg:hover, button:hover {
+    background-color: #ff77d9;
+}
+
+.order-notification {
+    position: absolute;
+    background-color: white;
+    max-width: 90vw;
+    border: 5px solid rgba(255, 62, 201, 1);
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px black,
+    -2px -2px 10px black;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.order-notification * {
+    text-align: center;
+}
+
+.order-notification img {
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .input-cont {
+        width: 100%;
+    }
+}
+
+@media (max-width: 820px) {
+    #main-content {
+        width: 70%;
+    }
+}

@@ -39,7 +39,7 @@ function showNotification(name) {
     notification.className = "notification";
     notification.innerHTML = `<img src="../resources/images/cross_icon.png"><p><strong>${name}</strong> добавлен(-а) в корзину</p>`;
     notificationsContainer.append(notification);
-    setTimeout(() => removeNotification(notification), 5000);
+    setTimeout(() => removeNotification(notification), 3000);
 }
 
 function removeNotification(notification) {

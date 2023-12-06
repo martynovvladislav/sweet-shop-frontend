@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../resources/images/favicon.png">
+    <link rel="stylesheet" href="../resources/styles/header.css">
+    <link rel="stylesheet" href="../resources/styles/footer.css">
+    <link rel="stylesheet" href="../resources/styles/scrollbar.css">
+    <link rel="stylesheet" href="place-order-style.css">
+    <script src="place-order_script.js" defer></script>
+    <title>Sweet Deal</title>
+</head>
+<body>
+     <main>
+        <div id="main-content">
+            <h2>Оформление заказа</h2>
+            <form method="dialog">
+                <div class="input-cont">
+                    <input type="text" name="fullname" id="fullname" placeholder="">
+                    <label for="fullname">Ваше имя</label>
+                </div>
+                <div class="input-cont">
+                    <input type="tel" name="phone" id="phone" required placeholder="">
+                    <label for="phone">Телефон</label>
+                </div>
+                <div class="input-cont">
+                    <input type="text" name="address" id="address" required placeholder="">
+                    <label for="address">Адрес</label>
+                </div>
+                <input type="submit" name="submitreg" id="submitreg" value="Заказать">
+            </form>
+            <button onclick="location.href='../basket'">Вернуться на сайт</button>
+        </div>
+        <!-- <div class="order-notification">
+            <img src="../resources/images/cross_icon.png">
+            <h2>Спасибо за заказ</h2>
+            <p>В течение 20 минут Вам перезвонят, чтобы подтвердить информацию о заказе</p>
+            <p>Хорошего дня!</p>
+        </div> -->
+     </main>
+</body>
+</html>
