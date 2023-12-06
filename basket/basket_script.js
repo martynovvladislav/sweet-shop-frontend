@@ -2,7 +2,7 @@ const basketContainer = document.getElementById("basket");
 const basketList = document.getElementById("items-cont");
 const eraseButton = document.getElementById("clear-basket-btn");
 const header = document.getElementsByTagName("HEADER")[0];
-header.style.background = "rgba(255, 62, 201, 1)"
+header.style.background = "rgba(255, 62, 201, 1)";
 
 let totalSum = 0;
 let totalAmount = 0;

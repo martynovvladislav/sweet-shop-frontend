@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../resources/images/favicon.png">
+    <link rel="stylesheet" href="about-style.css">
     <link rel="stylesheet" href="../resources/styles/header.css">
     <link rel="stylesheet" href="../resources/styles/footer.css">
     <link rel="stylesheet" href="../resources/styles/scrollbar.css">
-    <link rel="stylesheet" href="catalog-style.css">
-    <script src="catalog_script.js" defer></script>
+    <script src="about_script.js" defer></script>
     <title>Sweet Deal</title>
 </head>
 <body>
@@ -38,36 +38,54 @@
     </header>
     <div class="head-splitter"></div>
     <main>
-        <aside id="not-cont">
-            <!-- <div class="notification">
-                <p><strong>Сладкая вата</strong> добавлен(-а) в корзину</p>
-            </div> -->
-        </aside>
         <section id="init-display">
             <div id="section1-cont">
                 <div id="main-text-cont">
-                    <h1>Наша продукция</h1>
-                    <p>Ознакомьтесь с ассортиментом нашей продукции и сделайте заказ!</p>
-                </div>
-                <div id="cat-img-princess-cont">
-                    <img id="princess-img" src="../resources/images/princess.png" alt="">
-                </div>
-                <div id="cat-img-candies-cont">
-                    <img id="candies-img" src="../resources/images/catalog_candies.png" alt="">
+                    <h1>О нас</h1>
+                    <p>Немного информации о нашем магазине</p>
                 </div>
             </div>
         </section>
-        <section id="catalog">
-            <div id="categories">
-                <button id="category-sweets-btn">Сладости</button>
-                <button id="category-drinks-btn">Напитки</button>
-                <button id="category-snacks-btn">Снеки</button>
-            </div>
-            <div id="items-cont">
+        <section id="init-info">
+            <div id="init-info-content">
+                <h2>Sweet Deal - ваш проводник в мир сладкой жизни!</h2>
+                <p>Наш магазин работает уже три года и за это время собрал огромную базу клиентов и положительных отзывов.</p>
+                <p>Давайте подробнее рассмотрим процесс получения Вами сладостей из нашего магазина.</p>
             </div>
         </section>
-        <section id="map">
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A68e84e37303ebe073bd291a916f75c439219283f982c5bde5e1991f28c875607&amp;source=constructor" width="100%" height="300px" frameborder="0"></iframe>
+        <section id="path-info">
+            <div class="info-item">
+                <div class="pict">
+                    <img src="../resources/images/about_path_imgs/factory.png">
+                </div>
+                <div class="info">
+                    <h3>Мы являемся ритейлером</h3>
+                    <p>Продукты поступают нам непосредственно с заводов-производителей со всеми сопутствующими документами</p>
+                </div>
+            </div>
+            <div class="split"></div>
+
+            <div class="info-item">
+                <div class="pict">
+                    <img src="../resources/images/about_path_imgs/warehouse.png">
+                </div>
+                <div class="info">
+                    <h3>Склады по всей России</h3>
+                    <p>Товары ждут своего заказчика на специально оборудованных складах в соответствии с условиями хранения</p>
+                </div>
+            </div>
+            <div class="split"></div>
+
+            <div class="info-item">
+                <div class="pict">
+                    <img src="../resources/images/about_path_imgs/order.png">
+                </div>
+                <div class="info">
+                    <h3>Оформление заказа</h3>
+                    <p>Как только Ваш заказ был подтвержден мы сразу же приступаем к его сборке и отправке</p>
+                </div>
+            </div>
+            <div class="split"></div>
         </section>
     </main>
     <footer>
@@ -91,4 +109,3 @@
         <div id="footer-cpr">© 2023 Sweet Deal. All Rights Reserved. Owned by Martynov Vladislav.</div>
     </footer>
 </body>
-</html>

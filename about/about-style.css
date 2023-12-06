@@ -1,0 +1,212 @@
+:root {
+    --pink: #ff3ec9;
+    --white: #ffffff;
+    --milk: #fcfcfc;
+    --black: #000000;
+    --index: calc(1vw + 1vh);
+    --transformtime: 100ms;
+}
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+.head-splitter {
+    background-color: var(--pink);
+    height: 15vh;
+    width: 100%;
+}
+
+#init-display {
+    width: 100%;
+    height: 30vh;
+    background-color: var(--pink);
+    display: flex;
+    color: white;
+    overflow: hidden;
+}
+
+#section1-cont {
+    width: 100%;
+    height: 100%;
+    padding:  0 calc(var(--index) * 4);
+    display: flex;
+    align-items: center;
+}   
+
+#main-text-cont {
+    width: 100%;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+#main-text-cont h1 {
+    font-size: 2.5rem;
+    white-space: nowrap;
+    text-align: center;
+    margin: 0;
+}
+
+#main-text-cont p {
+    text-align: center;
+}
+
+/* initial information section */
+
+#init-info {
+    padding: 50px calc(var(--index) * 4);
+    position: relative;
+    background-image: url(../resources/images/candies_about.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    overflow: hidden;
+}
+
+/* #init-info:after {
+    content: "";
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    backdrop-filter: grayscale(100%);
+} */
+
+#init-info-content {
+    background-color: white;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+}
+
+#init-info-content h2 {
+    text-align: center;
+    color: var(--pink);
+}
+
+#init-info-content p {
+    text-align: center;
+    color: rgb(91, 91, 91);
+}
+
+/* path information section */
+
+#path-info {
+    padding: 50px calc(var(--index) * 4);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+}
+
+.info {
+    width: calc(50% - 60px);
+    background-color: white;
+    /* border: 2px solid var(--pink);
+    border-radius: 20px; */
+    padding: 30px;
+    transform: translateX(400%);
+    transition: transform 600ms;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.info h3, .info p {
+    margin: 0;
+    text-align: center;
+}
+
+.info h3 {
+    color: var(--pink);
+}
+
+.info p {
+    color: rgb(91, 91, 91);
+}
+
+.pict {
+    width: 50%;
+    transform: translateX(-400%);
+    transition: transform 400ms;
+    display: flex;
+    justify-content: center;
+}
+
+.pict img {
+    max-width: 300px;
+    width: 50%;
+    filter: drop-shadow(2px 2px 5px black);
+}
+
+.pict.show {
+    transform: translateX(0);
+}
+
+.info.show {
+    transform: translateX(0);
+}
+
+.split {
+    width: 100%;
+    height: 2px;
+    align-self: center;
+    background-color: var(--pink);
+    opacity: 0;
+    transition: opacity 400ms;
+}
+
+.split.show {
+    opacity: 1;
+}
+
+@media (max-width: 830px) {
+    .info-item {
+        flex-direction: column;
+    }
+
+    .info {
+        width: calc(100% - 64px);
+    }
+
+    .pict {
+        width: 100%;
+    }
+
+    .pict img {
+        width: 100%;
+    }
+}
