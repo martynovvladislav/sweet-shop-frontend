@@ -148,8 +148,7 @@ label {
     max-width: 90vw;
     /* border: 5px solid rgba(255, 62, 201, 1); */
     border-radius: 20px;
-    box-shadow: 1px 1px 10px black,
-    -1px -1px 10px black;
+    box-shadow: 1px 1px 10px black;
     padding: 30px;
     display: flex;
     flex-direction: column;

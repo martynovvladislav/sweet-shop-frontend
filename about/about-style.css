@@ -70,7 +70,7 @@ body {
 #init-info {
     padding: 50px calc(var(--index) * 4);
     position: relative;
-    background-image: url(../resources/images/candies_about.jpg);
+    background-image: url(../resources/images/background_pattern.png);
     background-attachment: fixed;
     background-size: cover;
     display: flex;
@@ -97,6 +97,8 @@ body {
     padding: 0 20px;
     position: relative;
     z-index: 1;
+    border: 1px solid var(--pink);
+    box-shadow: 1px 1px 10px var(--pink);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
