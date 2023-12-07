@@ -6,6 +6,7 @@ const notificationsContainer = document.getElementById("not-cont");
 const princessImage = document.getElementById("cat-img-princess-cont");
 const candiesImage = document.getElementById("cat-img-candies-cont");
 const mainText = document.getElementById("main-text-cont");
+const basketImgContainer = document.getElementById("basket-cont");
 let categoryState = "sweets";
 let itemsDB;
 
@@ -32,6 +33,7 @@ function changeBasket(item) {
         basket[item] = 1;
     }
     localStorage.setItem("basket", JSON.stringify(basket));
+    updateHeader();
 }
 
 function showNotification(name) {
@@ -152,3 +154,18 @@ window.addEventListener("scroll", function() {
     candiesImage.style.right = -value * 0.3 + "px";
     mainText.style.top = value * 0.5 + "px";
 });
+
+function updateHeader() {
+    let basket = JSON.parse(localStorage.getItem("basket"));
+    let totalAmount = 0;
+    for (let id in basket) {
+        totalAmount += Number(basket[id]);
+    }
+    if (totalAmount == 0) {
+        basketImgContainer.children[1].src = "../resources/images/empty_basket.png";
+    } else {
+        basketImgContainer.children[0].children[0].innerHTML = totalAmount;
+        basketImgContainer.children[1].src = "../resources/images/basket.png";
+    }
+}
+updateHeader();

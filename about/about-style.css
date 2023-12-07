@@ -122,6 +122,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    align-items: center;
+    overflow: hidden;
 }
 
 .info-item {
@@ -191,6 +193,48 @@ body {
 
 .split.show {
     opacity: 1;
+}
+
+#offer-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    transform: translateY(40%);
+    opacity: 0;
+    transition: all 500ms;
+}
+
+#offer-info.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#offer-info h1 {
+    color: var(--pink);
+    text-align: center;
+}
+
+#offer-info img {
+    max-width: 300px;
+    width: 90%;
+}
+
+#cat-button {
+    min-width: 150px;
+    border-width: 0;
+    border-radius: 30px;
+    padding: 10px 15px;
+    background-color: var(--pink);
+    color: white;
+    font-size: large;
+    font-weight: 1000;
+    cursor: pointer;
+    transition: background-color var(--transformtime);
+}
+
+#cat-button:hover {
+    background-color: #ff77d9;
 }
 
 @media (max-width: 830px) {

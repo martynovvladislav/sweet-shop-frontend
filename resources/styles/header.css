@@ -35,7 +35,7 @@ ul {
     margin: 0;
     padding: 0;
     display: inline-flex;
-    gap: calc(var(--index) * 3);
+    gap: calc(var(--index) * 5);
     transition: gap var(--transformtime);
 }
 
@@ -43,6 +43,7 @@ li {
     display: flex;
     align-items: center;
     transition: var(--transformtime);
+    position: relative;
 }
 
 li a {
@@ -102,6 +103,22 @@ li a:hover::after {
 #basket-cont {
     height: 100%;
     width: 50px;
+}
+
+#basket-counter {
+    position: absolute;
+    color: white;
+    top: 25px;
+    left: 0;
+    z-index: 11;
+    width: 100%;
+}
+
+#basket-counter p {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    font-size: medium;
 }
 
 #img-basket {
@@ -182,7 +199,7 @@ label {
 
 @media (max-width: 1000px) {
     ul {
-        gap: calc(var(--index));
+        gap: calc(var(--index) * 4);
     }
 }
 

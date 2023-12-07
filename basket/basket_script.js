@@ -2,6 +2,7 @@ const basketContainer = document.getElementById("basket");
 const basketList = document.getElementById("items-cont");
 const eraseButton = document.getElementById("clear-basket-btn");
 const header = document.getElementsByTagName("HEADER")[0];
+const basketImgContainer = document.getElementById("basket-cont");
 header.style.background = "rgba(255, 62, 201, 1)";
 
 let totalSum = 0;
@@ -28,6 +29,7 @@ function clearBasket() {
     <button id="cat-button" onclick="location.href='../catalog'">ПЕРЕЙТИ К КАТАЛОГУ</button>
 </div>`;
     localStorage.setItem("basket", JSON.stringify({}));
+    updateHeader();
 }
 
 function deleteItem(button) {
@@ -150,6 +152,7 @@ function renderBasket() {
 function renderTotalInfo() {
     totalSumCont.innerText = "Общая сумма заказа: " + totalSum + "₽";
     totalAmountCont.innerText = "Общее количество товаров: " + totalAmount;
+    updateHeader();
 }
 
 function update() {
@@ -189,3 +192,19 @@ window.addEventListener("scroll", function() {
 });
 
 update();
+updateHeader();
+
+function updateHeader() {
+    let basket = JSON.parse(localStorage.getItem("basket"));
+    let totalAmount = 0;
+    for (let id in basket) {
+        totalAmount += Number(basket[id]);
+    }
+    if (totalAmount == 0) {
+        basketImgContainer.children[1].src = "../resources/images/empty_basket.png";
+        basketImgContainer.children[0].children[0].innerHTML = "";
+    } else {
+        basketImgContainer.children[0].children[0].innerHTML = totalAmount;
+        basketImgContainer.children[1].src = "../resources/images/basket.png";
+    }
+}
