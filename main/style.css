@@ -70,7 +70,7 @@ body {
 #arrow-img-cont {
     position: absolute;
     z-index: 1;
-    top: 85vh;
+    bottom: 0;
     height: calc(var(--index) * 5);
     left: 50%;
     transform: translate(-50%, 0);
