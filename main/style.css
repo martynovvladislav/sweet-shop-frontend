@@ -364,7 +364,7 @@ body {
 
 
 
-@media (max-width: 320px) or (max-height: 320px) {
+/* @media (max-width: 320px) or (max-height: 320px) {
     body *, body header {
         display: none;
     }
@@ -380,4 +380,4 @@ body {
         right: 0;
         position: fixed;   
       }
-}
+} */
