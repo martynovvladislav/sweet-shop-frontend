@@ -368,6 +368,10 @@ main {
     #not-cont {
         right: 40px;
     }
+
+    .new-item::before {
+        left: -38vw;
+    }
 }
 
 @media (max-width: 460px) {
